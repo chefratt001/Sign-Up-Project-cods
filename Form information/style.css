@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: url(image/bg-1.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    margin-top: 80px;
+    background: rgba(255, 255, 255, 0.38);
+    backdrop-filter: blur(3px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.38);
+    border-radius: 15px;
+    display: flex;
+    padding: 25px;
+    width: 1000px;
+    height: 600px;
+    justify-content: space-between;
+}
+
+
+/* ส่วนของข้อความในกล่อง */
+
+.message-box {
+    width: 420px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 1.6rem;
+    color: azure;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.38);
+}
+
+.message-box span {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: rgb(8, 7, 79);
+}
+
+
+/* ---------------------------------- */
+
+.box-cover {
+    background: linear-gradient(to left, #1d1853, #3d3689);
+    box-shadow: 10px 10px 10px rgba(51, 12, 88, 0.38);
+    height: 620px;
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+}
+
+.form-login-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.label {
+    font-size: 3.5rem;
+    color: azure;
+}
+
+.input-nav-box input {
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+    height: 50px;
+    width: 400px;
+    padding: 8px;
+    font-size: 20px;
+    font-weight: 750;
+    border-radius: 10px;
+    border: 0;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.38);
+}
+
+.btn-box button {
+    width: 400px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 800;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.38);
+}
+
+.logo,
+.logo i {
+    margin: 15px;
+    font-size: 30px;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.Already,
+.Already a {
+    color: aliceblue;
+}
+
+
+/* hover  */
+
+.btn-box button:hover {
+    background-color: blue;
+    color: aliceblue;
+    transition: 0.5s ease all;
+}
+
+
+/* Style for the modal */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 15% auto;
+    padding: 20px;
+    border: 5px solid rgba(145, 106, 106, 0.8);
+    width: 80%;
+    color: rgb(25, 28, 81);
+    max-width: 400px;
+    font-weight: 800;
+    font-size: 2rem;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.close {
+    color: #ff0000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    .message-box {
+        width: 100%;
+        font-size: 1.4rem;
+    }
+    .message-box span {
+        font-size: 2rem;
+    }
+    .box-cover {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        margin-top: 20px;
+    }
+    .input-nav-box input {
+        width: auto;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .label {
+        font-size: 1.5rem;
+    }
+    .input-nav-box input {
+        width: auto;
+        font-size: 16px;
+    }
+    .message-box {
+        font-size: 1.2rem;
+    }
+    .message-box span {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .label {
+        font-size: 2rem;
+    }
+    .input-nav-box input {
+        width: auto;
+        font-size: 14px;
+    }
+    .message-box {
+        font-size: 1rem;
+    }
+    .message-box span {
+        font-size: 1.5rem;
+    }
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: star-animation 5s linear infinite;
+}
+
+@keyframes star-animation {
+    0% {
+        transform: translateY(0) translateX(0);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) translateX(50vw);
+        opacity: 0;
+    }
+}
